@@ -1,0 +1,77 @@
+.s-four
+  position: relative
+  padding-top: 150px
+  &:after
+    content: ''
+    position: absolute
+    height: 100%
+    width: 40%
+    right: 0
+    top: 0
+    background-color: $accent
+    z-index: 1
+  .container
+    position: relative
+    z-index: 2
+  .section-title
+    position: relative
+    z-index: 3
+  .section-counter
+    position: absolute
+    left: 0
+    bottom: 100px
+
+
+
+.offers-slider
+  position: relative
+  z-index: 2
+  top: -137px
+  .owl-dots
+    text-align: center
+    margin-top: 105px
+    button.owl-dot
+      display: inline-block
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      border: 2px solid #C4C4C4
+      +mt(.3s)
+      cursor: pointer
+      margin: 0 13px
+      background-color: #fff
+      &.active, &:hover
+        border-color: $accent
+        background-color: $accent
+
+.offer-slide
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &-img
+    width: 655px
+    height: 415px
+    +bg-cover
+  &-content
+    width: calc(100% - 720px)
+    margin-top: 100px
+    position: relative
+  &-counter
+    position: absolute
+    color: #efefef
+    font-size: 250px
+    font-weight: 700
+    top: calc(50% - 150px)
+    left: 20px
+  &-title
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 25px
+    position: relative
+    z-index: 2
+  &-desc
+    font-size: 18px
+    position: relative
+    z-index: 2
+    span
+      font-size: 30px

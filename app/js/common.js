@@ -89,6 +89,15 @@ $(document).ready(function(){
         navText: ["",""],
     });
 
+    $('.offers-slider').owlCarousel({
+        loop:true,
+        nav: false,
+        items: 1,
+        margin: 15,
+        dots: true,
+        autoHeight: false,
+    });
+
 
     function heightses() {
         if ($(window).width()<480) {
