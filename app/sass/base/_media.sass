@@ -5,6 +5,38 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+
+  .s-section
+    height: auto
+    min-height: 100vh
+
+  .s-first
+    padding-top: 250px
+    &-wrap
+      flex-direction: column
+      .logo
+        width: 100%
+        max-width: 496px
+      p
+        margin-bottom: 20px
+        font-size: 30px
+    &-right
+      margin-left: 0
+      width: 100%
+    &-img
+      display: block
+      margin-left: auto
+      margin-right: auto
+      width: 100%
+
+  .section-title
+    font-size: 60px
+    margin-bottom: 58px
+    &:after
+      height: 10px
+      width: 250px
+
   .hamburger
     display: block
   .main-mnu

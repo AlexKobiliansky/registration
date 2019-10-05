@@ -45,6 +45,11 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
+
+
+
+
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
