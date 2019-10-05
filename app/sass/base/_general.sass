@@ -69,6 +69,7 @@ ul
   height: 100vh
   display: flex
   align-items: center
+  padding: 70px 0
 
 .s-dark
   background: linear-gradient(269.37deg, #161616 0.17%, #323232 99.73%)
@@ -110,17 +111,11 @@ ul
   white-space: nowrap
   cursor: pointer
 
-
-
 //.btn-green
 //  color: #fff
 //  background-color: $accent
 //  &:hover
 //    background-color: darken($accent, 5%)
-
-
-
-
 
 .btn-green
   overflow: hidden
@@ -150,6 +145,28 @@ ul
     &:before
       transform: scale(8.3)
 
+.tag-item
+  display: inline-block
+  font-size: 12px
+  padding: 10px 30px
+  color: $text
+  border: 1px solid #a3a3a3
+  border-radius: 10px
+  text-align: center
+  +mt(.3s)
+  background-color: transparent
+  &.light
+    border-color: #fff
+    color: #fff
+  &:hover
+    color: #fff
+    background-color: $accent
+    border-color: $accent
+
+.tags-wrap
+  .tag-item
+    margin-right: 7px
+    margin-bottom: 15px
 
 
 
@@ -157,52 +174,8 @@ ul
 
 
 
-.pos_aware
-  //overflow: hidden
-  //position: relative
-  //z-index: 1
-    //height: 60px
-  //border: 0 none
-  //font-size: 16px
-  //padding-left: 60px
-  //padding-right: 60px
-  //text-align: center
-  //white-space: nowrap
-  //vertical-align: middle
-  //font-weight: bold
-  //background-image: none
-  //cursor: pointer
-  //user-select: none
-  //box-sizing: border-box
 
-.pos_aware:before
-  //content: ''
-  //position: absolute
-  //top: -20px
-  //left: 50%
-  //-webkit-transform: translate(-50%, -50%) scale(1)
-  //transform: translate(-50%, -50%) scale(1)
-  //display: block
-  //width: 40px
-  //height: 40px
-  //background: #fff
-  //border-radius: 50px
-  //-webkit-transition: 0.5s
-  //transition: 0.5s
-  //z-index: -1
 
-.pos_aware:hover
-  //-webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
-  //box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
-  //cursor: pointer
-  //-webkit-transition-delay: 0.1s
-  //transition-delay: 0.1s
-  //color: #e91e63
-  //z-index: 8
-
-.pos_aware:hover:before
-  -webkit-transform: scale(8.3)
-  transform: scale(8.3)
 
 
 
