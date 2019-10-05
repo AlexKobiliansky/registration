@@ -1,0 +1,110 @@
+.main-head
+  background-color: #fff
+
+.top-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &-contacts
+    text-align: right
+    .call
+      font-size: 20px
+      font-weight: 700
+      display: block
+      +mt(.3s)
+      color: $text
+      margin-bottom: 5px
+      &:hover
+        color: $accent
+    .worktime
+      font-size: 12px
+
+.main-mnu
+  font-size: 0
+  li
+    display: inline-block
+    a
+      display: inline-block
+      +mt(.3s)
+      font-size: 14px
+      padding: 21px 20px
+      font-weight: 700
+      color: $text
+      &:hover
+        background-color: $accent
+        color: #fff
+    &.active
+      a
+        background-color: $accent
+        color: #fff
+
+
+//hamburder
+.hamburger
+  display: none
+  padding: 0
+  &-box
+    width: 60px
+    height: 55px
+  &-inner, &-inner:before, &-inner:after
+    width: 60px
+    height: 11px
+
+.hamburger--elastic .hamburger-inner:after
+  top: 44px
+
+.hamburger--elastic .hamburger-inner:before
+  top: 22px
+
+.hamburger--elastic.is-active .hamburger-inner:after
+  transform: translate3d(0,-43px,0) rotate(-270deg)
+// end hamburger
+
+
+//mmenu
+.mm-menu_offcanvas
+  max-width: 800px
+
+
+
+.mm-menu_theme-dark
+  background-color: #161616
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 0 auto
+  transform: scaleY(.55)
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: rgba(#fff, .3)
+
+.mm-listitem
+  a
+    padding-top: 24px
+    padding-bottom: 22px
+
+.mm-navbar
+  border: none
+
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: #fff
+  letter-spacing: 2px
+
+.mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
+  color: #fff
+  font-size: 30px
+
+.mm-menu_navbar_top-3 .mm-panels
+  top: 140px
+
+
+
+
+//end mmenu
+
