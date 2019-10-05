@@ -45,6 +45,36 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
+    $('.tags-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 2,
+        margin: 7,
+        dots: false,
+        autoHeight: false,
+        navText: ["",""],
+    });
+
+
+    function heightses() {
+        if ($(window).width()<480) {
+            /**/
+        }
+
+        $('.fact-item-title').height('auto').equalHeights();
+        $('.tag-slide').height('auto').equalHeights();
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
+
+
+
+
 
 
 

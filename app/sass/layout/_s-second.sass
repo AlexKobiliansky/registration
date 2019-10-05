@@ -1,0 +1,98 @@
+.s-second
+  position: relative
+  padding-bottom: 150px
+  padding-top: 60px
+  &:before
+    content: ''
+    position: absolute
+    background-color: $accent
+    height: 487px
+    width: calc(50% - 88px)
+    left: 0
+    bottom: 150px
+  &-img
+    position: absolute
+    z-index: 2
+    bottom: 0
+    left: calc(50% - 495px)
+  .section-counter
+    position: absolute
+    bottom: -100px
+    left: 0
+
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &-right
+    width: 50%
+    margin-left: 120px
+    position: relative
+  &-left
+    width: calc(50% - 120px)
+
+
+.facts-wrap
+  margin-top: 90px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.fact-item
+  width: calc(50% - 15px)
+  margin-bottom: 50px
+  &-title
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 20px
+
+
+.tag
+  display: inline-block
+  font-size: 12px
+  padding: 10px 30px
+  color: $text
+  border: 1px solid #a3a3a3
+  border-radius: 8px
+  text-align: center
+  +mt(.3s)
+  background-color: transparent
+  &.light
+    border-color: #fff
+    color: #fff
+  &:hover
+    color: #fff
+    background-color: $accent
+    border-color: $accent
+
+.tags-slider
+  position: relative
+  z-index: 3
+  .owl-nav
+    position: absolute
+    width: 100%
+    left: 0
+    top: calc(50% - 12px)
+    button.owl-prev, button.owl-next
+      position: absolute
+      width: 24px
+      height: 24px
+      background-image: url('../img/icons/tags-nav.svg')
+      +bg-cover
+      border-radius: 50%
+      +mt(.3s)
+      &:hover
+        background-image: url('../img/icons/tags-nav-hover.svg')
+        background-color: $accent
+    button.owl-next
+      right: -32px
+    button.owl-prev
+      transform: rotate(180deg)
+      left: -32px
+
+.tag-slide
+  display: flex
+  .tag
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
