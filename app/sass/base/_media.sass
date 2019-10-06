@@ -4,6 +4,19 @@
 /*==========  Desktop First  ==========*/
 
 @media screen and (max-width: 1600px)
+
+
+  .s-third
+    .tags-wrap
+      margin-top: 20px
+
+
+  .regs-wrap
+    margin-top: 30px
+
+  .reg-item
+    margin-bottom: 30px
+
   .s-second
     overflow: hidden
     &:before
@@ -18,6 +31,22 @@
 
 @media screen and (max-width: 1400px)
 
+  .s-third
+    .section-title
+      padding-bottom: 25px
+      margin-bottom: 25px
+    .tag-item
+      margin-bottom: 8px
+    .section-counter
+      bottom: 0
+
+  .reg-item
+    margin-bottom: 15px
+    &-icon
+      width: 60px
+    &-desc
+      width: calc(100% - 80px)
+      font-size: 14px
 
   .s-second
     &:before
@@ -54,6 +83,23 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-third
+    .section-title
+      font-size: 45px
+      padding-bottom: 40px
+      margin-bottom: 40px
+
+  .regs-wrap
+    margin-top: 100px
+
+  .reg-item
+    margin-bottom: 50px
+    &-icon
+      width: 100px
+    &-desc
+      width: calc(100% - 130px)
+      font-size: 18px
 
   .tag-slide
     .tag-item
@@ -130,6 +176,25 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-third
+    .tags-wrap
+      margin-bottom: 50px
+    .section-title
+      font-size: 30px
+
+  .regs-wrap
+    margin-top: 50px
+
+  .reg-item
+    margin-bottom: 30px
+    width: 100%
+    &-icon
+      width: 60px
+    &-desc
+      font-size: 14px
+      width: calc(100% - 90px)
+
+
   .tag-slide
     .tag-item
       font-size: 14px
@@ -190,6 +255,26 @@
 
 // ≥768px
 @media screen and (max-width: 767px)
+
+  .s-third
+    padding-bottom: 120px
+    position: relative
+    .tags-wrap
+      display: none
+      margin-bottom: 30px
+    .tags-slider
+      margin-top: 30px
+      .owl-nav
+        button.owl-next, button.owl-prev
+          background-image: url('../img/icons/reviews-nav.svg')
+          &:hover
+            background-image: url('../img/icons/reviews-nav-hover.svg')
+      .tag-item
+        color: #fff
+        margin-bottom: 0
+    .tags-slider
+      display: block
+
 
   .s-second
     padding-top: 40px
@@ -261,6 +346,13 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-third
+    .section-title
+      font-size: 24px
+
+  .s-section.s-third
+    padding-bottom: 90px
 
   .fact-item
     width: 100%
