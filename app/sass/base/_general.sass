@@ -69,7 +69,6 @@ ul
   height: 100vh
   display: flex
   align-items: center
-  padding: 70px 0
 
 .s-dark
   background: linear-gradient(269.37deg, #161616 0.17%, #323232 99.73%)
@@ -90,11 +89,34 @@ ul
     left: 0
     bottom: 0
 
-.section-counter
+.section-counter, .tablet-section-counter
   font-weight: 700
   font-size: 30px
   span
     font-size: 80px
+
+
+.mobile-section-counter
+  display: none
+  font-size: 25px
+  color: $text
+  span
+    font-size: 50px
+  &.light
+    color: #fff
+
+
+.tablet-section-counter
+  display: none
+  width: 200px
+  text-align: center
+  position: fixed
+  z-index: 5
+  bottom: 30px
+  left: calc(50% - 100px)
+  color: #fff
+  &.light
+    color: #fff
 
 .btn
   display: inline-block

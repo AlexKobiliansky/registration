@@ -118,12 +118,36 @@ $(document).ready(function(){
         $('.tag-slide').height('auto').equalHeights();
     }
 
+
+        if ($(window).width()>=768) {
+            $('#fullpage').fullpage();
+        }
+
     $(window).resize(function() {
         heightses();
     });
 
     heightses();
 
+
+
+
+
+
+
+    //E-mail Ajax Send
+    $("form").submit(function() { //Change
+        var th = $(this);
+
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function() {
+
+        });
+        return false;
+    });
 
 
 
@@ -295,17 +319,5 @@ $(document).ready(function(){
 
 
 
-    //E-mail Ajax Send
-    $("form").submit(function() { //Change
-        var th = $(this);
 
-        $.ajax({
-            type: "POST",
-            url: "mail.php", //Change
-            data: th.serialize()
-        }).done(function() {
-
-        });
-        return false;
-    });
 });

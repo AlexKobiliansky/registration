@@ -49,22 +49,13 @@
 .hamburger
   display: none
   padding: 0
-  &-box
-    width: 60px
-    height: 55px
   &-inner, &-inner:before, &-inner:after
-    width: 60px
-    height: 11px
+    width: 35px
+    height: 5px
 
-.hamburger--elastic .hamburger-inner:after
-  top: 44px
-
-.hamburger--elastic .hamburger-inner:before
-  top: 22px
-
-.hamburger--elastic.is-active .hamburger-inner:after
-  transform: translate3d(0,-43px,0) rotate(-270deg)
-// end hamburger
+  &-box
+    width: 35px
+//end hamburger
 
 
 //mmenu
@@ -80,7 +71,9 @@
 .mm-logo
   display: block
   margin: 0 auto
-  transform: scaleY(.55)
+  width: 250px
+  transform: scaleY(.53)
+
 
 .mm-navbars_top
   border-color: transparent
@@ -90,8 +83,8 @@
 
 .mm-listitem
   a
-    padding-top: 24px
-    padding-bottom: 22px
+    padding-top: 14px
+    padding-bottom: 12px
 
 .mm-navbar
   border: none
@@ -104,10 +97,9 @@
 
 .mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
   color: #fff
-  font-size: 30px
 
 .mm-menu_navbar_top-3 .mm-panels
-  top: 140px
+  top: 120px
 
 
 
