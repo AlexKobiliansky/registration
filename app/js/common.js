@@ -173,7 +173,7 @@ $(document).ready(function(){
                                         "saturation": -100
                                     },
                                     {
-                                        "lightness": 65
+                                        // "lightness": 65
                                     },
                                     {
                                         "visibility": "on"
@@ -188,7 +188,7 @@ $(document).ready(function(){
                                         "saturation": -100
                                     },
                                     {
-                                        "lightness": "50"
+                                        // "lightness": "50"
                                     },
                                     {
                                         "visibility": "simplified"
@@ -209,7 +209,7 @@ $(document).ready(function(){
                                 "elementType": "all",
                                 "stylers": [
                                     {
-                                        "visibility": "simplified"
+                                        // "visibility": "simplified"
                                     }
                                 ]
                             },
