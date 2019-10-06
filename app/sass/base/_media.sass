@@ -5,6 +5,10 @@
 
 @media screen and (max-width: 1600px)
 
+  .s-five
+    overflow: hidden
+    .s-five-img
+      bottom: -90px
 
   .s-third
     .tags-wrap
@@ -31,6 +35,13 @@
 
 @media screen and (max-width: 1400px)
 
+  .s-five
+    padding-top: 40px
+    &-img
+      width: 300px
+      bottom: 5px
+    .section-counter
+      bottom: 0
 
   .s-four
     .container
@@ -97,6 +108,34 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-five
+    padding-top: 0
+    .section-title
+      font-size: 45px
+      text-align: center
+      margin-bottom: 75px
+      &:after
+        left: calc(50% - 80px)
+    &-wrap
+      flex-direction: column-reverse
+    &-right
+      width: 100%
+      margin-bottom: 40px
+      margin-right: 0
+    &-left
+      width: 100%
+    .tags-wrap
+      text-align: center
+    &-notice
+      text-align: center
+    .s-five-img
+      bottom: 0
+      width: 350px
+      left: 15px
+
+  .price-item
+    text-align: center
 
   .s-four
     .container
@@ -213,6 +252,13 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-five
+    .section-title
+      font-size: 30px
+      margin-bottom: 40px
+    &-img
+      display: none
+
   .s-four
     .section-title
       font-size: 30px
@@ -319,6 +365,11 @@
 // ≥768px
 @media screen and (max-width: 767px)
 
+  .s-five
+    padding: 60px 0 120px
+    &-right
+      margin-bottom: 0
+
   .s-four
     padding: 40px 0 120px
     position: relative
@@ -417,6 +468,34 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-five
+    .tags-wrap
+      display: none
+    .tags-slider
+      display: block
+      margin-bottom: 30px
+      .owl-nav
+        button.owl-next, button.owl-prev
+          background-image: url('../img/icons/reviews-nav.svg')
+          &:hover
+            background-image: url('../img/icons/reviews-nav-hover.svg')
+    .tag-item
+      color: #fff
+      margin-bottom: 0
+    &-notice
+      font-size: 12px
+
+  .s-section.s-five
+    padding-bottom: 90px
+
+  .price-item
+    font-size: 16px
+    margin-bottom: 30px
+    &-title
+      margin-bottom: 15px
+    &-desc
+      font-size: 14px
 
   .s-section.s-four
     padding-bottom: 90px
