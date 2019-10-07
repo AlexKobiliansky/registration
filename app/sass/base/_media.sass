@@ -5,6 +5,14 @@
 
 @media screen and (max-width: 1600px)
 
+  .s-six
+    .container
+      padding-top: 75px
+
+  .steps-wrap
+    margin-top: 70px
+    margin-bottom: 90px
+
   .s-five
     overflow: hidden
     .s-five-img
@@ -34,6 +42,25 @@
     //margin-bottom: 20px
 
 @media screen and (max-width: 1400px)
+
+
+  .s-six
+    &:before
+      height: 198px
+
+  .step-item
+    &-icon
+      margin-bottom: 15px
+      img
+        height: 55px
+    &-desc
+      font-size: 18px
+    &:before
+      font-size: 200px
+      top: calc(50% - 130px)
+
+  .steps-wrap
+    margin-bottom: 50px
 
   .s-five
     padding-top: 40px
@@ -108,6 +135,33 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-six
+    .container
+      padding-top: 0
+    .section-title
+      font-size: 45px
+    .tags-wrap
+      padding-left: 0
+      text-align: center
+    &:before
+      height: 150px
+      width: 100%
+
+  .steps-wrap
+    flex-direction: column
+    margin-top: 100px
+    margin-bottom: 0
+
+  .step-item
+    width: 100%
+    margin-bottom: 80px
+    &-icon
+      img
+        height: 70px
+        margin-bottom: 30px
+    &-desc
+      font-size: 22px
 
   .s-five
     padding-top: 0
@@ -252,6 +306,32 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+
+  .s-six
+    .section-title
+      font-size: 30px
+
+  .steps-wrap
+    flex-direction: row
+    margin-top: 150px
+    margin-bottom: 50px
+
+  .step-item
+    width: 33%
+    margin-bottom: 50px
+    &-icon
+      img
+        height: 50px
+        margin-bottom: 15px
+    &-desc
+      font-size: 16px
+    &:before
+      line-height: 1
+      font-size: 150px
+      top: calc(50% - 90px)
+
+
+
   .s-five
     .section-title
       font-size: 30px
@@ -365,6 +445,28 @@
 // ≥768px
 @media screen and (max-width: 767px)
 
+  .s-six
+    padding: 40px 0 120px
+    position: relative
+    .tags-wrap
+      display: none
+    .tags-slider
+      display: block
+    &:before
+      display: none
+    .mobile-section-counter
+      color: $text
+      top: auto
+
+  .steps-wrap
+    margin-top: 80px
+    margin-bottom: 0
+    flex-direction: column
+
+  .step-item
+    width: 100%
+    margin-bottom: 80px
+
   .s-five
     padding: 60px 0 120px
     &-right
@@ -468,6 +570,10 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-six
+    .tags-slider
+      margin-bottom: 30px
 
   .s-five
     .tags-wrap
