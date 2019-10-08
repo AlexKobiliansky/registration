@@ -5,6 +5,13 @@
 
 @media screen and (max-width: 1600px)
 
+  .s-eight
+    .container
+      margin-bottom: 100px
+
+  #map
+    height: 400px
+
   .s-six
     .container
       padding-top: 75px
@@ -42,6 +49,18 @@
     //margin-bottom: 20px
 
 @media screen and (max-width: 1400px)
+
+  .s-eight
+    .container
+      margin-bottom: 130px
+
+  #map
+    height: 320px
+
+  .s-eight-wrap
+    padding-top: 20px
+    .top-part
+      margin-bottom: 30px
 
   .s-seven
     .container
@@ -142,6 +161,26 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+
+  #map
+    height: 800px
+    margin-bottom: 50px
+
+  .s-eight
+    &-wrap
+      .top-part
+        margin-bottom: 50px
+      .bottom-part
+        flex-direction: column-reverse
+        align-items: center
+
+  .totop-wrap
+    flex-grow: 1
+  .copyright
+    flex-grow: 1
+    margin-bottom: 70px
+
 
   .s-seven
     .section-title
@@ -334,6 +373,14 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  #map
+    height: 500px
+
+  .foot-logo, .foot-adres, .foot-contacts
+    width: 30%
+
+  .foot-adres
+    text-align: center
 
   .reviews-slider
     padding-left: 50px
@@ -476,6 +523,32 @@
 
 // ≥768px
 @media screen and (max-width: 767px)
+
+  .copyright
+    margin-bottom: 0
+    padding-bottom: 70px
+
+  .s-eight
+    padding-bottom: 120px
+    display: block
+    .container
+      margin-bottom: 0
+    &-wrap
+      height: auto
+      .top-part
+        flex-wrap: wrap
+        margin-bottom: 0
+
+  .foot-logo, .foot-adres, .foot-contacts
+    width: 100%
+    text-align: center
+    margin-bottom: 50px
+
+  .foot-logo
+    img
+      max-width: 250px
+      margin-left: auto
+      margin-right: auto
 
   .s-seven
     position: relative
@@ -623,6 +696,13 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-section.s-eight
+    padding-bottom: 50px
+
+
+  #map
+    height: 300px
 
   .review-slide
     flex-direction: column

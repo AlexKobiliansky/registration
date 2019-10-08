@@ -129,15 +129,10 @@ $(document).ready(function(){
 
 
 
-
-    if (($(window).width() >= 768) && ($(window).width() < 1200)) {
+    if (($(window).width() >= 768)) {
         $('#fullpage').fullpage({
-            // scrollBar: true
+            scrollBar: true
         });
-    }
-
-    if ($(window).width()>=1200 ) {
-        $('#fullpage').fullpage();
     }
 
     $(window).resize(function() {
@@ -145,16 +140,13 @@ $(document).ready(function(){
     });
 
 
-
-
-
     $(document).on('scroll', function() {
         var posDoc = $(this).scrollTop();
 
         $('section').each(function(){
             var id = $(this).attr("id");
-            var topHeader = $(this).offset().top - 50;
-            var botHeader = topHeader + $(this).height() - 50;
+            var topHeader = $(this).offset().top - 100;
+            var botHeader = topHeader + $(this).height() - 100;
 
             if (
                 posDoc > topHeader &&
@@ -166,20 +158,38 @@ $(document).ready(function(){
                 if($(this).hasClass('light-counter') == true){
                     $('#section-counter').addClass('light')
                 } else {
-                    $('#section-counter').removeClass('dark')
+                    $('#section-counter').removeClass('light')
                 }
 
             }
         });
     });
 
-
-
     heightses();
 
 
+    $(document).on('scroll', function() {
+        var posDoc = $(this).scrollTop();
 
+        $('section').each(function(){
+            var id = $(this).attr("id");
+            var topHeader = $(this).offset().top - 100;
+            var botHeader = topHeader + $(this).height() - 100;
 
+            if (
+                posDoc > topHeader &&
+                posDoc < botHeader &&
+                id
+            ) {
+                $('.main-mnu li').removeClass("active");
+                $( '.main-mnu li a[href="#' + id + '"]' ).parents("li").addClass("active");
+            }
+        });
+    });
+
+    $(".main-mnu a").mPageScroll2id();
+
+    $('.preloader').fadeOut();
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change
@@ -198,172 +208,175 @@ $(document).ready(function(){
 
 
 
-    $(window).on('load', function() {
-        if ($('#map').length) {
-            function initMap() {
-                var mapAttr = $('#map'),
-                    latitude = mapAttr.data('lat'),
-                    longitude = mapAttr.data('lng'),
-                    zoom = mapAttr.data('zoom'),
-                    image = mapAttr.data('marker'),
-                    location = {lat: latitude, lng: longitude};
-
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: location,
-                    zoom: zoom,
-                    disableDefaultUI: true,
-                    zoomControl: true,
-                    streetViewControl: true,
-                    fullscreenControl: true,
-
-                    styles: [
-                            {
-                                "featureType": "administrative",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": "-100"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "administrative.province",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "visibility": "off"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "landscape",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": -100
-                                    },
-                                    {
-                                        // "lightness": 65
-                                    },
-                                    {
-                                        "visibility": "on"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "poi",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": -100
-                                    },
-                                    {
-                                        // "lightness": "50"
-                                    },
-                                    {
-                                        "visibility": "simplified"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": "-100"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.highway",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        // "visibility": "simplified"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.arterial",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "lightness": "30"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.local",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "lightness": "40"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "transit",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": -100
-                                    },
-                                    {
-                                        "visibility": "simplified"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "water",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "hue": "#ffff00"
-                                    },
-                                    {
-                                        "lightness": -25
-                                    },
-                                    {
-                                        "saturation": -97
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "water",
-                                "elementType": "labels",
-                                "stylers": [
-                                    {
-                                        "lightness": -25
-                                    },
-                                    {
-                                        "saturation": -100
-                                    }
-                                ]
-                            }
-                        ]
-                });
-
-                var marker = new google.maps.Marker({
-                    position: location,
-                    map: map,
-                    icon: image,
-                });
-
-                marker.setMap(map);
-            }
-
-            initMap();
-        }
+    /**
+     * toTop functionality start
+     */
+    $('#totop').click(function(e) {
+        e.preventDefault();
+        $('body,html').animate({scrollTop:0},600);
     });
+    /**
+     * toTop functionality end
+     */
+            setTimeout(function(){
+                if ($('#map').length) {
+                    function initMap() {
+                        var mapAttr = $('#map'),
+                            latitude = mapAttr.data('lat'),
+                            longitude = mapAttr.data('lng'),
+                            zoom = mapAttr.data('zoom'),
+                            image = mapAttr.data('marker'),
+                            location = {lat: latitude, lng: longitude};
 
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            center: location,
+                            zoom: zoom,
+                            disableDefaultUI: true,
+                            zoomControl: true,
+                            streetViewControl: true,
+                            fullscreenControl: true,
 
+                            styles: [
+                                {
+                                    "featureType": "administrative",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "saturation": "-100"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative.province",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "landscape",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "saturation": -100
+                                        },
+                                        {
+                                            // "lightness": 65
+                                        },
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "saturation": -100
+                                        },
+                                        {
+                                            // "lightness": "50"
+                                        },
+                                        {
+                                            "visibility": "simplified"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "saturation": "-100"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            // "visibility": "simplified"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.arterial",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "lightness": "30"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.local",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "lightness": "40"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "transit",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "saturation": -100
+                                        },
+                                        {
+                                            "visibility": "simplified"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "water",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "hue": "#ffff00"
+                                        },
+                                        {
+                                            "lightness": -25
+                                        },
+                                        {
+                                            "saturation": -97
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "water",
+                                    "elementType": "labels",
+                                    "stylers": [
+                                        {
+                                            "lightness": -25
+                                        },
+                                        {
+                                            "saturation": -100
+                                        }
+                                    ]
+                                }
+                            ]
+                        });
 
+                        var marker = new google.maps.Marker({
+                            position: location,
+                            map: map,
+                            icon: image,
+                        });
 
+                        marker.setMap(map);
+                    }
 
-
-
-
-
-
+                    initMap();
+                }
+            }, 2000)
 
 });
+
+
+

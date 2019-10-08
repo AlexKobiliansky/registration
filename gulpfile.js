@@ -45,6 +45,7 @@ gulp.task('scripts', function() {
 		'app/libs/fullpage/jquery.easings.min.js',
 		'app/libs/fullpage/scrolloverflow.min.js',
 		'app/libs/fullpage/jquery.fullPage.min.js',
+		'app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
