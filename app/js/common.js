@@ -130,9 +130,9 @@ $(document).ready(function(){
 
 
     if (($(window).width() >= 768)) {
-        $('#fullpage').fullpage({
-            scrollBar: true
-        });
+        // $('#fullpage').fullpage({
+        //     scrollBar: true
+        // });
     }
 
     $(window).resize(function() {
@@ -190,6 +190,39 @@ $(document).ready(function(){
     $(".main-mnu a").mPageScroll2id();
 
     $('.preloader').fadeOut();
+
+
+
+    //FORMS
+    $('input[type="file"]').styler({
+        filePlaceholder: 'Прикрепите Ваше фото'
+    });
+
+    var uPhone = $('.user-phone');
+    uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
+
+    uPhone.on('click', function (ele) {
+        var needelem = ele.target || event.srcElement;
+        needelem.setSelectionRange(4,4);
+        needelem.focus();
+    });
+
+    $.validate({
+        form : '.contact-form',
+        scrollToTopOnError: false
+    });
+
+    $("a[href='#callback'], a[href='#review']").magnificPopup({
+        type: "inline",
+        fixedContentPos: !1,
+        fixedBgPos: !0,
+        overflowY: "auto",
+        closeBtnInside: !0,
+        preloader: !1,
+        midClick: !0,
+        removalDelay: 300,
+        mainClass: "my-mfp-zoom-in",
+    });
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change

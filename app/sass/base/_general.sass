@@ -272,6 +272,96 @@ ul
 //end preloader
 
 
+form
+  text-align: center
+  h3
+    font-size: 30px
+    margin-bottom: 15px
+  .form-labels-wrap
+    margin-top: 30px
+  label
+    display: block
+    margin-bottom: 20px
+    text-align: left
+  input, textarea
+    width: 100%
+    padding: 14px 20px
+    font-size: 16px
+    color: $text
+    border: 1px solid #c4c4c4
+    border-radius: 8px
+    resize: none
+    &::placeholder
+      color: $text
+    &.error
+      border-color: red!important
+      &::placeholder
+        color: red!important
+  textarea
+    height: 100px
+  .btn-wrap
+    margin-top: 30px
+  .form-error
+    display: none!important
+
+
+
+
+.popup-form
+  background-color: #fff
+  max-width: 600px
+  width: 100%
+  display: block
+  position: relative
+  padding: 50px
+  margin-left: auto
+  margin-right: auto
+
+.jq-file
+  width: 100%
+  cursor: pointer
+
+.jq-file__name
+  font-size: 16px
+  padding: 14px 20px
+  line-height: 1.2
+  height: auto
+  color: $text
+  font-family: "Montserrat", sans-serif
+
+
+.jq-file__browse
+  font-size: 16px
+  line-height: 1
+  height: calc(100% - 2px)
+  display: flex
+  align-items: center
+  padding: 0 30px
+  cursor: pointer
+  font-family: "Montserrat", sans-serif
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+
 
 
 

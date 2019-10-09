@@ -46,6 +46,10 @@ gulp.task('scripts', function() {
 		'app/libs/fullpage/scrolloverflow.min.js',
 		'app/libs/fullpage/jquery.fullPage.min.js',
 		'app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
+		'app/libs/jquery-form-validator/form-validator/jquery.form-validator.min.js',
+		'app/libs/form-styler/jquery.formstyler.min.js',
+		'app/libs/inputmask/jquery.maskedinput.min.js',
+		'app/libs/magnificPopup/jquery.magnific-popup.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
