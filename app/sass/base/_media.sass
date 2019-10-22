@@ -15,6 +15,12 @@
   .s-six
     .container
       padding-top: 75px
+    &:before
+      height: 288px
+    .tags-wrap-container
+      &.active
+        .section-counter
+          bottom: 180px
 
   .steps-wrap
     //margin-top: 80px
@@ -46,6 +52,11 @@
 
 @media screen and (max-width: 1400px)
 
+
+  .s-six .tags-wrap-container.active .section-counter
+    bottom: 208px
+
+
   .s-eight
     .container
       margin-bottom: 0
@@ -70,7 +81,7 @@
 
   .s-six
     &:before
-      height: 198px
+      height: 310px
 
   .step-item
     &-icon
@@ -117,6 +128,10 @@
       margin-bottom: 8px
     .section-counter
       bottom: 0
+    .tags-wrap
+      height: 175px
+      &.active
+        height: 100%
 
   .reg-item
     //margin-bottom: 15px
@@ -162,6 +177,11 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-second
+    .tags-slider
+      display: block
+    .second-tags-slider
+      display: none
 
   #map
     height: 800px
@@ -530,6 +550,9 @@
 // ≥768px
 @media screen and (max-width: 767px)
 
+  .tags-wrap-wrap
+    display: none
+
   .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
     height: 3px
     width: 30px
@@ -891,3 +914,9 @@
 
 // ≤1200px
 +media-breakpoint-up(xl)
+
+
+@media screen and (min-width: 1601px )
+  .s-five
+    &-left
+      padding-bottom: 100px

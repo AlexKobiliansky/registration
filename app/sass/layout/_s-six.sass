@@ -5,7 +5,7 @@
     content: ''
     position: absolute
     background-color: $accent
-    height: 235px
+    height: 252px
     width: calc(50% - 350px)
     left: 0
     bottom: 0
@@ -25,15 +25,33 @@
       margin-bottom: 8px
   .tags-wrap-container
     position: relative
+    &.active
+      .section-counter
+        bottom: 150px
   .section-counter
     color: #fff
     position: absolute
     left: 0
-    top: 15px
+    bottom: 115px
+    //+mt(.3s)
   .container
     padding-top: 130px
   .tags-slider
     display: none
+  .tags-wrap
+    height: 175px
+    margin-bottom: 15px
+    &.active
+      height: 100%
+  .tags-wrap-wrap
+    .btn-wrap
+      text-align: center
+      .more-tags
+        background-image: url('../img/icons/tags-nav.svg')
+        &:hover
+          background-image: url('../img/icons/tags-nav-hover.svg')
+        &.active
+          //margin-bottom: 50px
 
 
 .steps-wrap
@@ -70,3 +88,4 @@
   &-desc
     font-size: 20px
     font-weight: 700
+    margin-bottom: 15px

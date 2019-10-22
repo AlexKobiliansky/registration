@@ -363,6 +363,32 @@ form
 
 
 
+.more-tags
+  display: inline-block
+  width: 24px
+  height: 24px
+  +mt(.3s)
+  border-radius: 50%
+  +bg-cover
+  background-image: url('../img/icons/tags-nav-hover.svg')
+  transform: rotate(90deg)
+  &:hover
+    background-color: $accent
+  &.active
+    transform: rotate(270deg)
+
+.tags-wrap
+  overflow: hidden
+  height: 200px
+  //+mt(.3s)
+  &.active
+    height: auto
+
+
+
+
+
+
 
 
 

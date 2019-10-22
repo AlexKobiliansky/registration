@@ -99,6 +99,32 @@ $(document).ready(function(){
         }
     });
 
+
+    $('.second-tags-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 2,
+        margin: 7,
+        dots: false,
+        autoHeight: false,
+        navText: ["",""],
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items: 1
+            },
+            // breakpoint from 480 up
+            480 : {
+                items: 5
+            },
+
+            // breakpoint from 480 up
+            1400 : {
+                items: 5
+            }
+        }
+    });
+
     $('.offers-slider').owlCarousel({
         loop:true,
         nav: false,
@@ -227,6 +253,18 @@ $(document).ready(function(){
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         $.magnificPopup.close();
+    });
+
+
+    $('.more-tags').on('click', function(e){
+        e.preventDefault();
+        var parent = $(this).parents('.tags-wrap-wrap');
+        var container = $(this).parents('.tags-wrap-container');
+        var tags = parent.find('.tags-wrap');
+
+        $(this).toggleClass('active');
+        tags.toggleClass('active');
+        container.toggleClass('active');
     });
 
 
