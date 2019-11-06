@@ -16,15 +16,9 @@
     .container
       padding-top: 75px
     &:before
-      height: 288px
-    .tags-wrap-container
-      &.active
-        .section-counter
-          bottom: 180px
-
-  .steps-wrap
-    //margin-top: 80px
-    //margin-bottom: 90px
+      height: 220px
+    .section-counter
+      bottom: 120px
 
   .s-five
     overflow: hidden
@@ -34,9 +28,6 @@
   .s-third
     .tags-wrap
       margin-top: 20px
-
-
-
 
   .s-second
     overflow: hidden
@@ -48,27 +39,21 @@
 
   .section-title
     padding-bottom: 45px
-    //margin-bottom: 20px
 
 @media screen and (max-width: 1400px)
-
-
-  .s-six .tags-wrap-container.active .section-counter
-    bottom: 208px
 
 
   .s-eight
     .container
       margin-bottom: 0
+    &-wrap
+      height: auto
+      padding-top: 40px
+      .top-part
+        margin-bottom: 40px
 
   #map
     height: 320px
-
-  .s-eight-wrap
-    //padding-top: 20px
-    height: auto
-    .top-part
-      //margin-bottom: 30px
 
 
   .s-seven
@@ -81,7 +66,9 @@
 
   .s-six
     &:before
-      height: 310px
+      height: 210px
+    .section-counter
+      bottom: 110px
 
   .step-item
     &-icon
@@ -129,7 +116,7 @@
     .section-counter
       bottom: 0
     .tags-wrap
-      height: 175px
+      height: 85px
       &.active
         height: 100%
 
@@ -396,6 +383,10 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .review-reward
+    width: 100%
+    padding: 0
 
   #map
     height: 500px
@@ -747,6 +738,11 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-third
+    .mobile-section-counter
+      display: block
+      top: auto
+
   form
     h3
       font-size: 22px
@@ -798,7 +794,7 @@
         right: 15px
 
   .review-reward
-    font-size: 16px
+    font-size: 12px
     margin-bottom: 30px
 
 

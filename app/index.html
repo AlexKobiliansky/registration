@@ -64,12 +64,12 @@
 			<div class="top-line">
 				<!-- main-mnu -->
 				<nav class="main-mnu">
-					<ul>
-						<li><a href="#01">Главная</a></li>
-						<li><a href="#04">Услуги</a></li>
-						<li><a href="#05">Стоимость</a></li>
-						<li><a href="#07">Отзывы</a></li>
-						<li><a href="#08">Контакты</a></li>
+					<ul id="main-mnu">
+						<li data-menuanchor="intro"><a href="#intro">Главная</a></li>
+						<li data-menuanchor="services"><a href="#services">Услуги</a></li>
+						<li data-menuanchor="cost"><a href="#cost">Стоимость</a></li>
+						<li data-menuanchor="reviews"><a href="#reviews">Отзывы</a></li>
+						<li data-menuanchor="footer"><a href="#footer">Контакты</a></li>
 					</ul>
 				</nav>
 				<!-- /main-mnu -->
@@ -91,7 +91,7 @@
 
 	<div id="fullpage">
 		<!-- ======= SECTION FIRST START ======= -->
-		<section class="section s-section s-dark s-first light-counter" id="01" data-anchor="intro">
+			<section class="section s-section s-dark s-first light-counter" id="01" data-anchor="intro">
 			<!-- section-counter -->
 			<div class="section-counter mobile-section-counter light"><span>01</span>/08</div>
 			<!-- /section-counter -->
@@ -121,80 +121,12 @@
 		<!-- ======= SECTION FIRST END ======= -->
 
 		<!-- ======= SECTION SECOND START ======= -->
-		<section class="section s-section s-second light-counter" id="02" data-anchor="about">
+		<section class="section s-section s-second light-counter" id="02" data-anchor="second">
 			<img src="img/s-second-img.png" alt="alt" class="s-second-img img-responsive">
 			<!-- section-counter -->
 			<div class="section-counter mobile-section-counter"><span>02</span>/08</div>
 			<!-- /section-counter -->
 			<div class="container">
-
-				<div class="second-tags-slider owl-carousel">
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Сколько времени нужно</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Сколько стоит прописка</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Прописка</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Сколько времени нужно</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Сколько стоит прописка</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Прописка</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Сколько времени нужно</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Сколько стоит прописка</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Прописка</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Несовершеннолетние</a>
-					</div>
-					<!-- slide end -->
-
-					<!-- slide start -->
-					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Регистрация</a>
-					</div>
-					<!-- slide end -->
-				</div>
 
 				<div class="s-second-wrap">
 					<div class="s-second-left">
@@ -308,7 +240,7 @@
 		<!-- ======= SECTION SECOND END ======= -->
 
 		<!-- ======= SECTION THIRD START ======= -->
-		<section class="section s-section s-dark s-third light-counter" id="03" data-anchor="facts">
+		<section class="section s-section s-dark s-third light-counter" id="03" data-anchor="third">
 			<!-- section-counter -->
 			<div class="section-counter mobile-section-counter light"><span>03</span>/08</div>
 			<!-- /section-counter -->
@@ -345,30 +277,23 @@
 					<!-- reg-item -->
 					<div class="reg-item">
 						<div class="reg-item-icon">
-							<img src="img/icons/reg-icon-4.svg" alt="alt" class="img-responsive">
-						</div>
-						<div class="reg-item-desc">Нет гарантии лучше, чем личная ответственность собственника, компании</div>
-					</div>
-					<!-- /reg-item -->
-
-					<!-- reg-item -->
-					<div class="reg-item">
-						<div class="reg-item-icon">
 							<img src="img/icons/reg-icon-5.svg" alt="alt" class="img-responsive">
 						</div>
 						<div class="reg-item-desc">Регистрация за 1000р фальшивка</div>
 					</div>
 					<!-- /reg-item -->
 
-					<!-- section-counter -->
-					<div class="section-counter"><span>03</span>/08</div>
-					<!-- /section-counter -->
+
 				</div>
 
 				<div class="tags-wrap-wrap">
+					<!-- section-counter -->
+					<div class="section-counter"><span>03</span>/08</div>
+					<!-- /section-counter -->
 					<div class="tags-wrap">
+
 						<!-- tag-item -->
-						<a href="#cc" class="tag-item light">Сколько стоит прописка</a>
+						<a href="#cost" class="tag-item light">Сколько стоит прописка</a>
 						<!-- /tag-item -->
 
 						<!-- tag-item -->
@@ -537,13 +462,13 @@
 				<div class="tags-slider owl-carousel">
 					<!-- slide start -->
 					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Сколько времени нужно</a>
+						<a href="#cost" class="tag-item">Сколько времени нужно</a>
 					</div>
 					<!-- slide end -->
 
 					<!-- slide start -->
 					<div class="tag-slide">
-						<a href="#cc" class="tag-item">Сколько стоит прописка</a>
+						<a href="ddcc" class="tag-item">Сколько стоит прописка</a>
 					</div>
 					<!-- slide end -->
 
@@ -570,7 +495,7 @@
 		<!-- ======= SECTION THIRD END ======= -->
 
 		<!-- ======= SECTION FOUR START ======= -->
-		<section class="section s-section s-four" id="04" data-anchor="offer">
+		<section class="section s-section s-four" id="04" data-anchor="services">
 			<!-- section-counter -->
 			<div class="section-counter mobile-section-counter"><span>04</span>/08</div>
 			<!-- /section-counter -->
@@ -629,7 +554,7 @@
 		<!-- ======= SECTION FOUR END ======= -->
 
 		<!-- ======= SECTION FIVE START ======= -->
-		<section class="section s-section s-dark s-five light-counter" id="05" data-anchor="prices">
+		<section class="section s-section s-dark s-five light-counter" id="05" data-anchor="cost">
 			<!-- section-counter -->
 			<div class="section-counter mobile-section-counter light"><span>05</span>/08</div>
 			<!-- /section-counter -->
@@ -857,9 +782,12 @@
 		<!-- ======= SECTION FIVE END ======= -->
 
 		<!-- ======= SECTION SIX START ======= -->
-		<section class="section s-section s-six" id="06" data-anchor="steps">
+		<section class="section s-section s-six" id="06" data-anchor="six">
 			<!-- section-counter -->
 			<div class="section-counter mobile-section-counter"><span>06</span>/08</div>
+			<!-- /section-counter -->
+			<!-- section-counter -->
+			<div class="section-counter"><span>06</span>/08</div>
 			<!-- /section-counter -->
 			<div class="container">
 				<h2 class="section-title">3 шага к регистрации</h2>
@@ -896,9 +824,7 @@
 				</div>
 
 				<div class="tags-wrap-container">
-					<!-- section-counter -->
-					<div class="section-counter"><span>06</span>/08</div>
-					<!-- /section-counter -->
+
 
 					<div class="tags-wrap-wrap">
 						<div class="tags-wrap">
@@ -1185,7 +1111,7 @@
 				</div>
 				<div class="s-seven-bottom">
 					<a href="#review" class="btn btn-green item">Оставить отзыв</a>
-					<div class="review-reward item">Оставь отзыв и получи 1000 ₽</div>
+					<div class="review-reward item">Нам будет приятно, если вы оставите отзыв. Так же, это поможет сделать выбор тем, кто в поиске, возможно, как чей-то комментарий помог вам.</div>
 					<!-- section-counter -->
 					<div class="section-counter item"><span>07</span>/08</div>
 					<!-- /section-counter -->
@@ -1223,9 +1149,9 @@
 						<!-- /section-counter -->
 
 						<div class="totop-wrap">
-							<a href="#cc" class="btn btn-green" id="totop">Наверх</a>
+							<a href="#01" class="btn btn-green" id="totop">Наверх</a>
 						</div>
-						<div class="copyright">© 2010 - 2019 Регистрация-Прописка.рф</div>
+						<div class="copyright">©2019 ПропискаМСК</div>
 					</div>
 				</div>
 			</div>
@@ -1240,13 +1166,6 @@
 
 	<!-- form start -->
 	<form class="contact-form popup-form" id="callback">
-
-		<!-- Hidden Required Fields -->
-		<!--			<input type="hidden" name="project_name" value="Регистрация-прописка">-->
-		<!--			<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">-->
-		<!--			<input type="hidden" name="form_subject" value="Заявка с сайта Регистрация-прописка">-->
-		<!-- END Hidden Required Fields -->
-
 
 		<h3>Оставьте заявку</h3>
 		<p>И мы свяжемся с Вами в ближайшее время</p>
