@@ -1,24 +1,27 @@
 .s-seven
-  .section-title
-    text-align: center
-    &:after
-      left: calc(50% - 80px)
+  padding: 70px 0 100px
   &-bottom
     display: flex
     justify-content: space-between
     align-items: center
     .btn
       width: 250px
+  .container
+    position: relative
+  .section-counter
+    top: 0
+    right: 0
+    position: absolute
 
 .review-reward
-  text-align: center
   font-size: 14px
-  width: calc(100% - 400px)
+  width: calc(100% - 450px)
   padding: 0 20px
+  font-weight: 700
 
 .reviews-slider
-  margin-top: 110px
-  padding-right: 280px
+  margin-top: 100px
+  padding-right: 200px
   position: relative
   margin-bottom: 100px
   .owl-nav
@@ -62,5 +65,5 @@
     font-weight: 700
   &-date
     font-size: 12px
-    color: #c6c6c6
+    color: $accent
     margin-bottom: 20px

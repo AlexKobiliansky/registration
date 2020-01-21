@@ -155,19 +155,21 @@ $(document).ready(function(){
 
 
 
-    if (($(window).width() >= 1200)) {
-        $('#fullpage').fullpage({
-            // scrollBar: true
-            // menu: '#main-mnu'
-        });
-    }
+    // if (($(window).width() >= 1200)) {
+    //     $('#fullpage').fullpage({
+    //         scrollBar: true,
+    //         autoScrolling:false,
+    //         fitToSectionDelay: 5000000,
+    //         // menu: '#main-mnu'
+    //     });
+    // }
 
-    if (($(window).width() >= 768) && ($(window).width() < 1200)) {
-        $('#fullpage').fullpage({
-            scrollBar: true,
-            // menu: '#main-mnu'
-        });
-    }
+    // if (($(window).width() >= 768) && ($(window).width() < 1200)) {
+    //     $('#fullpage').fullpage({
+    //         scrollBar: true,
+    //         // menu: '#main-mnu'
+    //     });
+    // }
 
     $(window).resize(function() {
         heightses();
@@ -202,26 +204,26 @@ $(document).ready(function(){
     heightses();
 
 
-    // $(document).on('scroll', function() {
-    //     var posDoc = $(this).scrollTop();
-    //
-    //     $('section').each(function(){
-    //         var id = $(this).attr("id");
-    //         var topHeader = $(this).offset().top - 100;
-    //         var botHeader = topHeader + $(this).height() - 100;
-    //
-    //         if (
-    //             posDoc > topHeader &&
-    //             posDoc < botHeader &&
-    //             id
-    //         ) {
-    //             $('.main-mnu li').removeClass("active");
-    //             $( '.main-mnu li a[href="#' + id + '"]' ).parents("li").addClass("active");
-    //         }
-    //     });
-    // });
+    $(document).on('scroll', function() {
+        var posDoc = $(this).scrollTop();
 
-    // $(".main-mnu a").mPageScroll2id();
+        $('section').each(function(){
+            var id = $(this).attr("id");
+            var topHeader = $(this).offset().top - 100;
+            var botHeader = topHeader + $(this).height() - 100;
+
+            if (
+                posDoc > topHeader &&
+                posDoc < botHeader &&
+                id
+            ) {
+                $('.main-mnu li').removeClass("active");
+                $( '.main-mnu li a[href="#' + id + '"]' ).parents("li").addClass("active");
+            }
+        });
+    });
+
+    $(".main-mnu a").mPageScroll2id();
 
     $('.preloader').fadeOut();
 
@@ -230,6 +232,20 @@ $(document).ready(function(){
     //FORMS
     $('input[type="file"]').styler({
         filePlaceholder: 'Прикрепите Ваше фото'
+    });
+
+    $('.large-form select').styler();
+
+    //date-picker custom
+    $( ".date-picker" ).datepicker({
+        dayNames: [ "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота" ],
+        dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чтв", "Пн", "Сб" ],
+        monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+        monthNamesShort: [ "Янв", "Феф", "Мар", "Апр", "Май", "Инь", "Иль", "Авг", "Сен", "Окт", "Нбр", "Дек" ],
+        dateFormat: "dd.mm.yy",
+        firstDay: 1,
+        changeYear: true,
+        yearRange: "1920:c"
     });
 
     var uPhone = $('.user-phone');
@@ -292,10 +308,10 @@ $(document).ready(function(){
     /**
      * toTop functionality start
      */
-    // $('#totop').click(function(e) {
-    //     e.preventDefault();
-    //     $('body,html').animate({scrollTop:0},600);
-    // });
+    $('#totop').click(function(e) {
+        e.preventDefault();
+        $('body,html').animate({scrollTop:0},600);
+    });
     /**
      * toTop functionality end
      */

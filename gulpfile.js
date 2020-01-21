@@ -50,6 +50,9 @@ gulp.task('scripts', function() {
 		'app/libs/form-styler/jquery.formstyler.min.js',
 		'app/libs/inputmask/jquery.maskedinput.min.js',
 		'app/libs/magnificPopup/jquery.magnific-popup.min.js',
+		'app/libs/tablesaw/tablesaw.jquery.js',
+		'app/libs/tablesaw/tablesaw-init.js',
+		'app/libs/datePicker/jquery-ui.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

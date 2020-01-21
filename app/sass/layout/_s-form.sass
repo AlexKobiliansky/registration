@@ -1,0 +1,83 @@
+.s-form
+  padding: 85px 0
+  .container
+    position: relative
+  .section-counter
+    position: absolute
+    right: 0
+    top: 0
+
+
+.large-form
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+    position: relative
+  input
+    border-radius: 30px
+    padding: 20px 32px
+    border: 2px solid #fff
+  label
+    margin-bottom: 40px
+    &.has-error
+      span
+        color: red
+    span
+      display: block
+      font-size: 18px
+      font-weight: 700
+      margin-bottom: 20px
+  .jq-selectbox
+    width: 100%
+    &.opened
+      .jq-selectbox__trigger-arrow
+        transform: rotate(180deg)
+  .jq-selectbox__select
+    height: auto
+    font-size: 16px
+    line-height: 19px
+    padding: 21px 32px
+    font-family: $default-font
+    border-radius: 30px
+    background: #fff
+  .jq-selectbox__select-text
+    padding-right: 40px
+  .jq-selectbox__trigger
+    border-left: none
+  .jq-selectbox__trigger-arrow
+    border: none
+    width: 20px
+    height: 12px
+    background-image: url('../img/icons/arrow-select.svg')
+    right: 30px
+    top: calc(50% - 6px)
+  .jq-selectbox li.selected
+    background-color: $accent
+  .jq-selectbox li
+    &:hover
+      background-color: $accent
+  .btn-wrap
+    //margin-top: 90px
+    text-align: right
+    position: absolute
+    right: 0
+    bottom: 40px
+    .btn
+      font-weight: 700
+  .has-date-picker
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      z-index: 11
+      width: 30px
+      height: 30px
+      +bg-cover
+      background-image: url('../img/icons/calendar-icon.svg')
+      right: 25px
+      bottom: 15px
+      cursor: pointer
+
+
+.large-form-left, .large-form-right
+  width: calc(50% - 80px)
