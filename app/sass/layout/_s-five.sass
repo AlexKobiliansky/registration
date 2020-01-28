@@ -9,16 +9,11 @@
     position: absolute
   .section-title
     margin-bottom: 70px
-  .btn-wrap
-    margin-top: 30px
-    padding-left: 135px
-    .btn
-      //font-size: 12px
-
-
 
 .prices
   width: 100%
+  th
+    text-align: center
   td, th
     padding: 10px 40px 10px 0
     line-height: 1.7
@@ -30,6 +25,12 @@
   tbody
     tr:nth-child(odd)
       background-color: rgba(255, 255, 255, 0.05)
+    tr:last-child
+      background-color: transparent!important
+  .btn
+    font-size: 12px
+    padding: 12px 20px
+    width: auto
 
 
 .tablesaw-swipe .tablesaw-swipe-cellpersist
