@@ -53,6 +53,7 @@ gulp.task('scripts', function() {
 		'app/libs/tablesaw/tablesaw.jquery.js',
 		'app/libs/tablesaw/tablesaw-init.js',
 		'app/libs/datePicker/jquery-ui.min.js',
+		'app/libs/tagcloud/jquery.tagcloud.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

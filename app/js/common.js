@@ -74,8 +74,6 @@ $(document).ready(function(){
 
             // Replace image with new SVG
             $img.replaceWith($svg);
-            $img.replaceWith($svg);
-            $img.replaceWith($svg);
         }, 'xml');
     });
 
@@ -152,6 +150,12 @@ $(document).ready(function(){
 
         $('.tag-slide .tag-item').height('auto').equalHeights();
     }
+
+    $("#cloud a").tagcloud({
+        size: {start: 12, end: 36, unit:"px"}
+    });
+
+
 
 
 
